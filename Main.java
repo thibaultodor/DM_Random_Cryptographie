@@ -2,7 +2,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class main {
+public class Main {
     private static long sVN=1111;
     private static long sSTM=1111;
     private static long sRANDU=1111;
