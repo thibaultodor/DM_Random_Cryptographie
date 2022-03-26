@@ -1,3 +1,5 @@
+package source;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,7 +11,7 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter("test.txt"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("source/test.txt"));
 
         /*
         for (int j = 0; j < 1000; j++) {
