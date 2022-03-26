@@ -3,24 +3,27 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class main {
-    private static long sVN=1315;
+    private static long sVN=1111;
     private static long sSTM=1111;
     private static long sRANDU=1111;
 
 
     public static void main(String[] args) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter("crypto.txt"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("test.txt"));
 
+        /*
         for (int j = 0; j < 1000; j++) {
             String str = Long.toString(vonNeuman(sVN));
             writer.write(str+"\n");
         }
-        /*
-        for (int j = 0; j < 1000; j++) {
+        */
 
+        for (int j = 0; j < 1000; j++) {
             String str = Long.toString(STM(sSTM));
             writer.write(str+"\n");
         }
+
+        /*
         for (int j = 0; j < 1000; j++) {
             String str = Long.toString(RANDU(sRANDU));
             writer.write(str+"\n");
@@ -42,7 +45,7 @@ public class main {
     private static long STM(long seed){
         int a = 16807;
         int b = 0;
-        int m = ((int) Math.pow(2, 31));
+        long m = ((long) Math.pow(2, 31))-1;
         sSTM = (a * seed + b) % m;
         return sSTM;
     }
@@ -50,7 +53,7 @@ public class main {
     private static long RANDU(long seed){
         int a = 65539;
         int b = 0;
-        int m = ((int) Math.pow(2, 31))-1;
+        long m = ((long) Math.pow(2, 31));
         sRANDU = (a * seed + b) % m;
         return sRANDU;
     }
